@@ -2,11 +2,25 @@
 
 // Fonts
 
+@mixin heading-font() {
+  font-family: 'Montserrat', sans-serif;
+}
+@mixin serif-font() {
+  font-family: 'Lora', serif;
+}
+
+@mixin script-font() {
+  font-family: 'Rancho', cursive;
+}
+
+@mixin sans-serif-font() {
+  font-family: 'Open Sans', sans-serif;
+}
 
 // Text Effects
 
 @mixin text-shadow-dark() {
-	text-shadow: 0 0 15px white;
+	text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 // Transitions
