@@ -1,0 +1,11 @@
+Slider with fade https://stackoverflow.com/questions/29169823/bootstrap-carousel-how-to-fade-between-slides-slowly
+
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+https://stackoverflow.com/questions/26770055/bootstrap-carousel-fade-no-longer-working-with-maxcdn-3-3-bootstrap-min-css
+*/
+/*
+inspired from http://codepen.io/Rowno/pen/Afykb 
+https://stackoverflow.com/questions/26770055/bootstrap-carousel-fade-no-longer-working-with-maxcdn-3-3-bootstrap-min-css
+*/
+

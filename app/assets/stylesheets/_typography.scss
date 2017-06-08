@@ -1,0 +1,140 @@
+body {
+	font-family: 'Bubbler One', sans-serif;
+	font-size: 16px;
+}
+
+h1, 
+h2,
+h3,
+h4, 
+h5, 
+h6 {
+	font-family: 'Bubbler One', sans-serif;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 100;
+}
+
+p {
+	margin: 0 0 20px;
+}
+
+.serif {
+	font-family: 'Bubbler One', sans-serif;
+}
+
+.sans-serif {
+	font-family: 'Bubbler One', sans-serif;
+}
+
+.heading {
+	font-family: 'Bubbler One', sans-serif;
+}
+
+.script {
+	font-family: 'Bubbler One', sans-serif;
+}
+
+.allcaps {
+	text-transform: uppercase !important;
+}
+
+hr.primary, 
+hr.light,
+hr.dark {
+	max-width: 100px;
+	margin: 25px auto;
+	border-bottom: none;
+}
+
+hr.primary {
+	border-top: 6px solid $primary;
+}
+
+hr.light {
+	border-top: 6px solid $light;
+}
+
+hr.primary-small, 
+hr.light-small, 
+hr.dark-small {
+	max-width: 50px;
+	margin: 15px auto;
+}
+
+hr.primary-small {
+	border-top: 3px solid $primary;
+}
+
+hr.dark-small {
+	border-top: 3px solid $dark;
+}
+
+.text-dark {
+	color: $dark;
+}
+
+.text-light {
+	color: $light;
+}
+
+.text-primary {
+	color: $primary;
+}
+
+.text-success {
+	color: $success;
+}
+
+.text-info {
+	color: $info;
+}
+
+.text-warning {
+	color: $warning;
+}
+
+.text-danger {
+	color: $danger;
+}
+
+a.light-text {
+	color: darken($light, 10%);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: darken($primary, 10%);
+		outline: none;
+	}
+
+}
+
+@media(min-width: 767px) {
+
+	p {
+		margin: 0 0 30px;
+	}
+
+	a {
+	color: $primary;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: darken($primary, 10%);
+		outline: none;
+	}
+}
+
+
+	
+}
