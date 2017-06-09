@@ -57,7 +57,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "haathi-consulting_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  host = ENV['DOMAIN']
+  host = "haathi-consulting.com"
   
   config.action_mailer.default_url_options = { host: host }
   # ActionMailer Config
