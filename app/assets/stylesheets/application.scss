@@ -14,6 +14,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @import "variables";
 @import "mixins";
 @import "elements";
@@ -21,5 +22,4 @@
 @import "nav";
 @import "carousel";
 @import "header";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
