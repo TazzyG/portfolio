@@ -73,9 +73,10 @@ Rails.application.configure do
   port:              '587',
   authentication:    'plain',
   enable_starttls_auto: true,
-  user_name:         ENV['SENDGRID_API_KEY'],
+  user_name:         ENV['SENDGRID_USER_NAME'],
   password:          ENV['SENDGRID_PASSWORD'],
   domain:            ENV['DOMAIN']
+  api_key:           ENV['SENDGRIP_API_KEY']
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
