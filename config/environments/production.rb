@@ -57,6 +57,27 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "haathi-consulting_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  host = ENV['DOMAIN']
+  
+  config.action_mailer.default_url_options = { host: host }
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+  
+  ActionMailer::Base.smtp_settings = {
+  
+  address:           'smtp.sendgrid.net',
+  port:              '587',
+  authentication:    'plain',
+  enable_starttls_auto: true,
+  user_name:         ENV['SENDGRID_API_KEY'],
+  password:          ENV['SENDGRID_PASSWORD'],
+  domain:            ENV['DOMAIN']
+  }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

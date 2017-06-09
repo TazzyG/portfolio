@@ -82,4 +82,4 @@ production:
   <<: *default
   database: haathi-consulting_production
   username: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['HAATHI-CONSULTING_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
