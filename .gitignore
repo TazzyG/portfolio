@@ -15,3 +15,13 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+.env
+
+/shared/*
+
+/node_modules
+/yarn-error.log
+
+# Ignore uploaded test images.
+/public/uploads
