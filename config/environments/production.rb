@@ -76,7 +76,6 @@ Rails.application.configure do
   user_name:         ENV['SENDGRID_USER_NAME'],
   password:          ENV['SENDGRID_PASSWORD'],
   domain:            ENV['DOMAIN']
-  api_key:           ENV['SENDGRID_API_KEY']
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
