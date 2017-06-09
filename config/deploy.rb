@@ -2,7 +2,7 @@
 lock "3.8.1"
 
 set :application, "haathi-consulting"
-set :repo_url, "https://github.com/TazzyG/"
+set :repo_url, "https://github.com/TazzyG/portfolio.git"
 
 set :deploy_to, '/home/laurie/haathi-consulting'
 
