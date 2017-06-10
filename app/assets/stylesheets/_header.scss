@@ -6,12 +6,15 @@
 	color: $dark;
 }
 
+
+
 .intro-slider {
 	background-color: $dark;
 	width: 100%;
 	text-align: center;
 	padding: 0;
 	height: 500px;
+
 	.carousel{
 		height: 100%;
 			h4: {
@@ -56,6 +59,9 @@
 		top: 0;
 		margin-top: -25px;
 	}
+	.overlay {
+		display: none;
+	}
 }
 
 
@@ -81,21 +87,36 @@
 	}
 	.brand-heading {	
 		font-size: 55px;
-		letter-spacing: 1px;
+		letter-spacing: 10px;
 		font-weight: 900;
-		padding: 5%
+		padding-top: 5%;
+		padding-bottom: 20px;
+		
 			}
 	.brand-sub-heading {	
 		font-size: 30px;
-		letter-spacing: 3px;
+		letter-spacing: 15px;
 		font-weight: 600;
-		padding: 5%
+		
 			}
 	.intro-body {
 		postion: absolute;
 		right: 0;
 		left: 0;
 		bottom: 0;
+		}
+	.overlay {
+		
+		display: block;
+		width: 100%;
+		background-color: black;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
 		}
 	}		
 }
