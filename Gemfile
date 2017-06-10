@@ -37,6 +37,11 @@ gem 'dotenv-rails'
 gem 'devise', '~> 4.2'
 gem 'sendgrid'
 
+gem 'carrierwave-imageoptimizer', '~>1.4'
+gem 'mini_magick', '~> 4.6'
+gem 'fog-aws', group: :production
+gem 'carrierwave', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

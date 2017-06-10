@@ -1,0 +1,33 @@
+<%= form_for @showcase, html: { multipart: true } do |f| %>
+<footnote class= "text-muted"> Your own showcase will display. It will appear as a list under categories in the public page for people not signed in.</footnote>
+  <% if @showcase.errors.any? %>
+    <div id = "error_explanation">
+      <h2><%= pluralize(@showcase.errors.count, "error") %> prohibited this showcase from being saved</h2>
+      </ul>
+      <% @showcase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        </div>
+      <% end %>
+  <% end %>
+  <div class="form-group">
+    <%= f.hidden_field :user_id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "title" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :picture_credit, autofocus: true, class: "form-control", placeholder: "image credit" %>
+  </div>
+  
+  <div class="form-group">
+    <footnote>Upload your Banner Image - 1500 x 170px</footnote>
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+  
+  <div class="btn-group">
+    <%= f.submit "Save showcase", class: "btn btn-primary" %>
+  </div>
+<% end %>
