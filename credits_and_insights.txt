@@ -13,4 +13,5 @@ Lots of challenges, 1 remember to bundle install --without production and after 
 
 
 Woah! Big time errors with ImageMagic, it turned out to be my mac was missing Graphics magick, did brew install graphicsmagick did the trick. I may have to this in my server will see. 
+brew install graphicsmagick
 
