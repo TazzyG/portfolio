@@ -11,3 +11,6 @@ https://stackoverflow.com/questions/26770055/bootstrap-carousel-fade-no-longer-w
 
 Lots of challenges, 1 remember to bundle install --without production and after going back bundle install -- development or you get weird errors like cannot find listen gem
 
+
+Woah! Big time errors with ImageMagic, it turned out to be my mac was missing Graphics magick, did brew install graphicsmagick did the trick. I may have to this in my server will see. 
+
