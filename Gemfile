@@ -35,7 +35,7 @@ gem 'font-awesome-rails'
 gem 'capistrano-dotenv-tasks', require: false
 gem 'dotenv-rails'
 gem 'devise', '~> 4.2'
-gem 'sendgrid'
+gem 'sendgrid', '~> 1.2', '>= 1.2.4'
 
 gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-processing', '~> 1.1'

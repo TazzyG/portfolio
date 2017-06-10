@@ -75,7 +75,7 @@ Rails.application.configure do
   enable_starttls_auto: true,
   user_name:         ENV['SENDGRID_USER_NAME'],
   password:          ENV['SENDGRID_PASSWORD'],
-  domain:            ENV['DOMAIN']
+  domain:            'haathi-consulting.com'
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
