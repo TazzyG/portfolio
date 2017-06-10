@@ -37,7 +37,7 @@ gem 'dotenv-rails'
 gem 'devise', '~> 4.2'
 gem 'sendgrid'
 
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-processing', '~> 1.1'
 gem 'mini_magick', '~> 4.7'
 gem 'fog-aws', group: :production
