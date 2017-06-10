@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+
+  mini_magick_processing_error: "mini_magick_error"
+

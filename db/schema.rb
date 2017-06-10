@@ -16,10 +16,14 @@ ActiveRecord::Schema.define(version: 20170610000738) do
   enable_extension "plpgsql"
 
   create_table "showcases", force: :cascade do |t|
-    t.string   "picture"
+    t.string   "image"
     t.integer  "user_id"
     t.string   "title"
-    t.string   "picture_credit"
+    t.string   "credit"
+    t.string   "heading"
+    t.string   "sub_heading"
+    t.text     "content"
+    t.string   "reference_info"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.index ["user_id"], name: "index_showcases_on_user_id", using: :btree

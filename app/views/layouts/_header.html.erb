@@ -24,7 +24,7 @@
     </div>
     <% @showcases.each do |showcase| %>
     <div class="item">
-      <%= image_tag showcase.image.url(:screen), class: "fill" %> 
+      <%= image_tag showcase.image.url, class: "fill" %> 
       <div class="overlay"></div>
       <div class = "carousel-caption"> 
         <div class= "intro-body">

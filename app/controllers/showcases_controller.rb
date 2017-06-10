@@ -46,6 +46,6 @@ class ShowcasesController < ApplicationController
    @showcase = Showcase.find(params[:id])   
   end
   def showcase_params
-    params.require(:showcase).permit(:title, :content, :picture, :picture_cache, :picture_credit, :user_id)
+    params.require(:showcase).permit(:image, :image_cache, :title, :credit, :heading, :subheading, :content, :reference_info)
   end
 end

@@ -1,5 +1,4 @@
 <%= form_for @showcase, html: { multipart: true } do |f| %>
-<footnote class= "text-muted"> Your own showcase will display. It will appear as a list under categories in the public page for people not signed in.</footnote>
   <% if @showcase.errors.any? %>
     <div id = "error_explanation">
       <h2><%= pluralize(@showcase.errors.count, "error") %> prohibited this showcase from being saved</h2>
@@ -17,11 +16,26 @@
   </div>
 
   <div class="form-group">
-    <%= f.text_field :picture_credit, autofocus: true, class: "form-control", placeholder: "image credit" %>
+    <%= f.text_field :credit, autofocus: true, class: "form-control", placeholder: "image credit" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :heading, autofocus: true, class: "form-control", placeholder: "heading" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :sub_heading, autofocus: true, class: "form-control", placeholder: "subheading" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :reference_info, autofocus: true, class: "form-control", placeholder: "reference_info" %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :content, autofocus: true, class: "form-control", placeholder: "content" %>
   </div>
   
   <div class="form-group">
-    <footnote>Upload your Banner Image - 1500 x 170px</footnote>
+    <footnote>Upload your Banner Image - 1980 x 1320px</footnote>
     <%= f.label :image %>
     <%= f.file_field :image, class: "form-control" %>
     <%= f.hidden_field :image_cache %>
@@ -31,3 +45,4 @@
     <%= f.submit "Save showcase", class: "btn btn-primary" %>
   </div>
 <% end %>
+

@@ -1,4 +1,4 @@
-<% provide(:title,<%= @showcase.title %> ) %>
+<% provide(:title, "Show Case" ) %>
 <div class= "container text-left" id="new_showcase">
   <div class= "row">
     <div class= "col-md-8 col-offset-2">
@@ -7,8 +7,8 @@
           <h1> <%= @showcase.title %></h1>
         </div>
         <div class= "panel-body">
-         <p><%= image_tag @showcase.image_url(:large) %> </p>
-         <p><%= @showcase.picture_credit %>
+         <p><%= image_tag @showcase.image_url %> </p>
+         <p><%= @showcase.credit %>
         </div>
         <div class = "panel-footer">
           <%= link_to 'Edit', edit_showcase_path(@showcase) %> | 

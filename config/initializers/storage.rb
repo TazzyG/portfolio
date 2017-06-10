@@ -1,9 +1,3 @@
-require 'carrierwave/orm/activerecord'
-require 'carrierwave'
-require 'carrierwave/storage/abstract'
-require 'carrierwave/storage/file'
-require 'carrierwave/storage/fog'
-
 CarrierWave.configure do |config|
   if Rails.env.production?
     config.storage :fog
@@ -16,9 +10,11 @@ CarrierWave.configure do |config|
       # host: 's3.creativecalgary.ca'
       # endpoint: 'https://s3.creativecalgary.ca:8080'
   }
+    config.cache_dir = "#{Rails.root}/tmp/uploads"
     config.fog_directory  = "haathi"
     config.fog_public     = false
-    
+    config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" }
+    config.storage = :fog
     else
     config.storage :file
     config.enable_processing = false if Rails.env.test?

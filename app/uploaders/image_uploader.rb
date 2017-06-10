@@ -5,6 +5,36 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   include CarrierWave::ImageOptimizer
 
+  process :resize_to_limit => [1980, 1320]
+
+  version :thumb do
+    process :resize_to_fill => [100, 100]
+  end
+  
+  version :medium do
+    process :resize_to_fill => [300, 300]
+  end
+  
+  version :header do
+    process :resize_to_fill => [1980, 100]
+  end
+  
+  version :screen do
+    process :resize_to_fill => [1980, 120]
+  end
+  
+  version :preview do
+    process :resize_to_fill => [480, 480]
+  end
+  
+  version :small do
+    process :resize_to_fill => [140, 140]
+  end
+
+
+
+
+
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
     storage :fog
@@ -19,29 +49,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :thumb do
-    process :resize_to_fill => [100, 100]
-  end
   
-  version :medium do
-    process :resize_to_fill => [300, 300]
-  end
   
-  version :screen do
-    process :resize_to_fill => [1980, 1320]
-  end
+    
   
-  version :banner do
-    process :resize_to_fill => [1980, 100]
-  end
   
-  version :preview do
-    process :resize_to_fill => [480, 480]
-  end
   
-  version :small do
-    process :resize_to_fill => [140, 140]
-  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
@@ -74,5 +87,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  def default_url(*args)
+  ActionController::Base.helpers.asset_path("fallback/" + [version_name, "larm-rmah-151478.jpg"].compact.join('_'))
+  end
 
 end
