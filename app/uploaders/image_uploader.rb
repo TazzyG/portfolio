@@ -15,11 +15,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [300, 300]
   end
   
-  version :header do
-    process :resize_to_fill => [1980, 100]
+  version :project do
+    process :resize_to_fill => [800, 400]
   end
   
-  version :screen do
+  version :header do
     process :resize_to_fill => [1980, 120]
   end
   

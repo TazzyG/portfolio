@@ -25,7 +25,7 @@ end
 
 def update
 	if @project.update(project_params)
-		redirect_to @projet, notice: "project was updated"
+		redirect_to @project, notice: "project was updated"
 	else
 		render action: "edit"
 	end

@@ -11,12 +11,12 @@
     <p> Select a project for more details </p>
   </div> 
   <div class="col-md-12 projects">
-    <% @projects.each_slice(3) do |projects| %> 
+    <% @projects.each_slice(2) do |projects| %> 
       <div class= "row">
         <% projects.each do |project| %>
-          <div class= "col-xs-4">
+          <div class= "col-xs-6">
             <div class= "img-responsive center">
-              <%= display_poster_with_link(project) %>
+              <%= display_project_with_link(project) %>
             </div>
             <div class = "text-center text-info ">
             <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
