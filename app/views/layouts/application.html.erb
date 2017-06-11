@@ -2,15 +2,7 @@
 <html lang= "en">
 	<%= render "layouts/head" %>
 	<%= render "layouts/shim" %>
-  <body id = "page-top" data-spy="scroll" data-target= "navbar-fixed-top">
-  	
-  		<%= render "layouts/nav" %>
-      
-			
-
-			
-    	<%= yield %>
-    
-   
+  <body id = "page-top" data-spy="scroll" data-target= ".navbar-fixed-top">	
+    <%= yield %> 
   </body>
 </html>
