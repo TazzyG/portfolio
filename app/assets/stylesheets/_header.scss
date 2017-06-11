@@ -7,13 +7,37 @@
 }
 
 
+.btn-scroll-light {
+	font-size: 30px;
+	background: transparent;
+	height: 55px;
+	width: 55px;
+	
+	line-height: 45px;
+	@include button-transition;
+	color: $light;
+	
+	&:hover, 
+	&:focus,
+	&:active {
+		color: $light;
+		background: fade($light, 20%);
+	}
+	&:hover, 
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+
 
 .intro-slider {
 	background-color: $dark;
 	width: 100%;
 	text-align: center;
 	padding: 0;
-	height: 500px;
+	height: 500x;
 
 	.carousel{
 		height: 100%;
@@ -66,10 +90,12 @@
 
 
 @media(min-width: 768px) {
+.btn-scroll-light {
+	margin-top: 60px;
+	font-size: 55px;
+		}
 .intro-slider{
-	padding:0;
-	height: 100%;
-	min-height: 0;
+	
 	.carousel-caption {
 		width: auto;
 		right: 0;
@@ -80,10 +106,8 @@
 	.carousel {
 		h4 {
 			font-size: 26px;
+			height: auto;
 		}
-	}
-	.carousel-caption {
-		width: auto;
 	}
 	.brand-heading {	
 		font-size: 55px;
@@ -101,16 +125,16 @@
 			}
 	.intro-body {
 		postion: absolute;
-		right: 0;
-		left: 0;
-		bottom: 0;
+		top: 0;
 		}
+
+		
 	.overlay {
 		
 		display: block;
 		width: 100%;
-		background-color: black;
-		opacity: 0.6;
+		background-color: $dark;
+		opacity: 0.3;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -129,5 +153,17 @@
 	.brand-subheading {
 	font-sizer: 50px;
 	}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.intro-slider {
+		padding: 0;
+		height: 100%;
+		min-height: 0;
+		.overlay {
+		height: 100%;
+		}
+
 	}
 }
