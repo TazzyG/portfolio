@@ -14,4 +14,8 @@ module ApplicationHelper
     current_page?(link_path) ? 'active' : ""
   end
 
+  def display_poster_with_link(post)
+      link_to image_tag(post.image.url(:medium)), post
+  end
+
 end

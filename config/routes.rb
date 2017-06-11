@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 	root 'welcome#index'
 	get 'welcome/index'
 	
+	resources :projects
 	resources :showcases
-	resources :users
+	
 
 end

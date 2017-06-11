@@ -1,0 +1,25 @@
+
+<div class = "container">
+  <div class= "text-center">
+  <% if current_user %>
+    <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
+  <% end %>
+  </div>
+ 
+  <div class="col-md-12 projects">
+    <% @projects.each_slice(3) do |projects| %> 
+      <div class= "row">
+        <% projects.each do |project| %>
+          <div class= "col-xs-4">
+            <div class= "img-responsive center">
+              <%= display_poster_with_link(project) %>
+            </div>
+            <div class = "text-center text-info ">
+            <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
+            </div> 
+          </div>
+        <% end %> 
+      </div>
+    <% end %>
+  </div>
+</div>
