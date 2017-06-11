@@ -107,7 +107,7 @@
 				&:hover,
 				&:focus,
 				&:active {
-					color: $light;
+					color: $border;
 					outline: none;
 					background-color: transparent;
 				}
@@ -135,7 +135,7 @@
 		padding: 20px 0;
 		border-bottom: 1px solid;
 		border-color: $border;
-		background-color: $light;
+		background-color: $dark;
 
 		#Haathi {
 			a { color: $dark;

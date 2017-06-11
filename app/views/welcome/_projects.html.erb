@@ -1,11 +1,15 @@
-
+<section id= "projects">
 <div class = "container">
-  <div class= "text-center">
+  <div class= "text-center row">
   <% if current_user %>
     <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
   <% end %>
   </div>
- 
+  <div class= "row text-center">
+  <h2> Projects </h2>
+
+    <p> Select a project for more details </p>
+  </div> 
   <div class="col-md-12 projects">
     <% @projects.each_slice(3) do |projects| %> 
       <div class= "row">
@@ -23,3 +27,5 @@
     <% end %>
   </div>
 </div>
+
+</section>
