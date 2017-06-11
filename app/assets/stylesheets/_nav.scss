@@ -132,10 +132,16 @@
 
 	
 	.navbar-light.top-nav-collapse {
-		padding: 5px 0;
+		padding: 20px 0;
 		border-bottom: 1px solid;
 		border-color: $border;
 		background-color: $light;
+
+		#Haathi {
+			a { color: $dark;
+				}
+			}
+
 		a {
 			color: $dark
 		}
