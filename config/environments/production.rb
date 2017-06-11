@@ -73,10 +73,11 @@ Rails.application.configure do
   port:              '587',
   authentication:    'plain',
   enable_starttls_auto: true,
-  user_name:         ENV['SENDGRID_USER_NAME'],
+  user_name:         ENV['SENDGRID_USERNAME'],
   password:          ENV['SENDGRID_PASSWORD'],
-  domain:            'haathi-consulting.com'
+  domain:            ENV['DOMAIN']
   }
+  
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
