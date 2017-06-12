@@ -1,0 +1,59 @@
+.btn {
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open .dropdown-toggle {
+      outline: none !important;
+  }
+}
+
+ul.button-list {
+    li {
+        padding: 0;
+        &:first-child {
+            margin-bottom: 10px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media(min-width:767px) {
+    ul.button-list {
+        li {
+            &:first-child {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+// Main Buttons
+
+.btn-default {
+  @include button-variant($dark, $light, darken($light, 15%));
+}
+
+.btn-primary {
+  @include button-variant($light, $primary, darken($primary, 5%));
+}
+
+.btn-success {
+  @include button-variant($light, $success, darken($success, 5%));
+}
+
+.btn-info {
+  @include button-variant($light, $info, darken($info, 5%));
+}
+
+.btn-warning {
+  @include button-variant($light, $warning, darken($warning, 5%));
+}
+
+.btn-danger {
+  @include button-variant($light, $danger, darken($danger, 5%));
+}
