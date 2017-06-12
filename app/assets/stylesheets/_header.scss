@@ -33,12 +33,11 @@
 
 
 .intro-slider {
-	background-color: $dark;
+	background-color: black;
 	width: 100%;
 	text-align: center;
 	padding: 0;
-	height: 500x;
-
+	height: auto;
 	.carousel{
 		height: 100%;
 			h4: {

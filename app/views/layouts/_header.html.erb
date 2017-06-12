@@ -2,11 +2,13 @@
   <!-- Indicators -->
   
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
     <div class="item active">
       
       <%= image_tag "dawid-zawila-221021.jpg",  class: "fill"%> 
+    
       <div class="overlay"></div>
+
       <div class = "carousel-caption"> 
         <div class= "intro-body">
           
@@ -26,6 +28,7 @@
     <% @showcases.each do |showcase| %>
     <div class="item">
       <%= image_tag showcase.image.url, class: "fill" %> 
+
       <div class="overlay"></div>
       <div class = "carousel-caption"> 
         <div class= "intro-body">
