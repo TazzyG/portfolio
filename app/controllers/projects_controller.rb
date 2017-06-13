@@ -43,7 +43,7 @@ private
 	end
 
 	def project_params
-		params.require(:project).permit(:image, :image_cache, :title, :content )
+		params.require(:project).permit(:image, :image_cache, :title, :content, :link, :site_name )
 	end
 end
 

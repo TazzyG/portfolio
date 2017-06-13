@@ -11,7 +11,7 @@
          <p><%= @project.content %>
         </div>
         <div class = "panel-footer">
-          <%= link_to 'Edit', edit_showcase_path(@project) %> | 
+          <%= link_to 'Edit', edit_project_path(@project) %> | 
           <%= link_to 'Delete', @project, method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </div>

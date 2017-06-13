@@ -14,9 +14,16 @@
     <% @projects.each_slice(2) do |projects| %> 
       <div class= "row">
         <% projects.each do |project| %>
-          <div class= "col-xs-6">
-            <div class= "img-responsive center">
-              <%= display_project_with_link(project) %>
+          <div class= "col-md-6 project_list">
+            <div class= "project img-responsive center"> 
+            <%= link_to project.link, target: 'blank' do %> 
+              <div class= "screen "> 
+                  <%= image_tag project.image.url(:project) %> <br>
+              </div>
+              <div class= "keyboard " %>
+                  <%= image_tag "keyboard1.png" %>
+              </div>
+            <% end %>   
             </div>
             <div class = "text-center text-info ">
             <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>

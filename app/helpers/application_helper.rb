@@ -18,4 +18,6 @@ module ApplicationHelper
       link_to image_tag(post.image.url(:project)), post
   end
 
+    
+
 end
