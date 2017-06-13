@@ -26,7 +26,13 @@
             <% end %>   
             </div>
             <div class = "text-center text-info ">
-            <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
+            <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
+            <% if current_user %>
+            <div>
+              <%= link_to "Ddit", edit_project_path(project) %> 
+              <%= link_to "Delete", project, method: :delete, data: {confirm: "Are You Sure?"} %>
+            </div>
+            <% end %> 
             </div> 
           </div>
         <% end %> 
