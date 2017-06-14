@@ -1,21 +1,26 @@
-.project {
+.project_list {
 
-max-width: 100%; 
-height: auto;
+	max-width: 600px; 
+	margin: 0 auto;
 
-.screen {
+	.screen {
+	display: block;
+	border: 10px solid black;
+	border-radius: 8px;
+	position: relative;	
 
-border: 10px solid black;
-border-radius: 8px;	
+		}
 
+	.keyboard {
+		display: block;
+		margin-top: -5px;
+		position: relative;
+	}	
+}
+
+@media(min-width: 767px) {
+	.project-list {
+		margin-bottom: 30px;	
 	}
-
-.keyboard {
-	margin-top: -5px;
 }
-			
-	
-	
-}
-
 

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
  <%= render 'layouts/head'%>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-   <%= render 'layouts/nav' %>
-   
-   <%= yield %>   
+  <body id="page-top"  data-target=".navbar-fixed-top">
+	  <div id = "wrapper">
+	  <%= render 'layouts/nav' %>
+	  <%= render 'layouts/header' %> 
+
+   	<%= yield %> 
+   	</div>   
  </body>
 </html>

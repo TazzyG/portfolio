@@ -30,14 +30,6 @@
 	}
 }
 
-.intro-img-half {
-
-	width: 100%;
-	height: auto;
-	
-}
-
-
 .intro-slider {
 	background-color: black;
 	width: 100%;
@@ -47,7 +39,7 @@
 	.carousel{
 		height: 100%;
 			h4: {
-				font-sizer: 22px;
+				font-size: 22px;
 			}
 	}
 	.carousel-inner {
@@ -133,19 +125,9 @@
 		top: 0;
 		}
 
-	.intro-img-half {
-		height: 20%;
-		min-height: 0;
-		.overlay {
-			height: 100%;
-			min-height: 0;
-		}
-	}
-
 		
 	.overlay {
-		
-		display: block;
+    display: block;
 		width: 100%;
 		background-color: $dark;
 		opacity: 0.3;
@@ -154,8 +136,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-
-		}
+    }
 	}		
 }
 
