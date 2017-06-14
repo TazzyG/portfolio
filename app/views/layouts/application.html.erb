@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang= "en">
-	<%= render "layouts/head" %>
-	<%= render "layouts/shim" %>
-  <body id = "page-top" data-spy="scroll" data-target= ".navbar-fixed-top">	
-  	<%= render "layouts/flash_messages" %>
-    <%= yield %> 
-  </body>
+<html lang="en">
+ <%= render 'layouts/head'%>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   <%= render 'layouts/nav' %>
+   <% unless user_signed_in? %>
+    <%= render 'layouts/header' %>
+   <% end %>
+   <%= yield %>   
+ </body>
 </html>

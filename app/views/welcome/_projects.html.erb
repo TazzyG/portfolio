@@ -1,44 +1,44 @@
 <section id= "projects">
-<div class = "container">
-  <div class= "text-center row">
-  <% if current_user %>
-    <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
-  <% end %>
-  </div>
-  <div class= "row text-center">
-  <h2> Projects </h2>
-
-    <p> Select a project for more details </p>
-  </div> 
-  <div class="col-md-12 projects">
-    <% @projects.each_slice(2) do |projects| %> 
-      <div class= "row">
-        <% projects.each do |project| %>
-          <div class= "col-md-6 project_list">
-            <div class= "project img-responsive center"> 
-            <%= link_to project.link, target: 'blank' do %> 
-              <div class= "screen "> 
-                  <%= image_tag project.image.url(:project) %> <br>
-              </div>
-              <div class= "keyboard " %>
-                  <%= image_tag "keyboard1.png" %>
-              </div>
-            <% end %>   
-            </div>
-            <div class = "text-center text-info ">
-            <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
-            <% if current_user %>
-            <div>
-              <%= link_to "Edit", edit_project_path(project) %> 
-              <%= link_to "Delete", project, method: :delete, data: {confirm: "Are You Sure?"} %>
-            </div>
-            <% end %> 
-            </div> 
-          </div>
-        <% end %> 
-      </div>
+  <div class = "container">
+    <% if current_user %>
+      <div class="row text-center"> 
+      <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
+     </div>
     <% end %>
-  </div>
-</div>
+    
 
+    <div class= "row text-center">
+      <h2> Projects </h2>
+      <p> Websites built with Ruby on Rails </p>
+    </div> 
+    <div class="col-md-12 projects">
+      <% @projects.each_slice(2) do |projects| %> 
+        <div class= "row">
+          <% projects.each do |project| %>
+            <div class= "col-md-6 project_list">
+              <div class= "project img-responsive center"> 
+                                <%= link_to project.link, target: 'blank' do %> 
+                                  <div class= "screen "> 
+                                      <%= image_tag project.image.url(:project) %> <br>
+                                  </div>
+                                  <div class= "keyboard " %>
+                                      <%= image_tag "keyboard1.png" %>
+                                  </div>
+                                <% end %>   
+              </div>
+              <div class = "text-center text-light ">
+                <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
+                <% if current_user %>
+                  <div>
+                    <%= link_to "Edit", edit_project_path(project) %> 
+                    <%= link_to "Delete", project, method: :delete, data: {confirm: "Are You Sure?"} %>
+                  </div>
+               <% end %> 
+              </div> 
+            </div>
+          <% end %> 
+        </div>
+      <% end %>
+    </div>
+  </div>
 </section>

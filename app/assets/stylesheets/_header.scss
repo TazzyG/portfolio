@@ -30,6 +30,12 @@
 	}
 }
 
+.intro-img-half {
+
+	width: 100%;
+	height: auto;
+	
+}
 
 
 .intro-slider {
@@ -127,6 +133,15 @@
 		top: 0;
 		}
 
+	.intro-img-half {
+		height: 20%;
+		min-height: 0;
+		.overlay {
+			height: 100%;
+			min-height: 0;
+		}
+	}
+
 		
 	.overlay {
 		
@@ -151,8 +166,16 @@
 	}
 	.brand-subheading {
 	font-sizer: 50px;
+		}
 	}
+
+	.intro-img-half {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	@include background-cover;
 	}
+
 }
 
 @media only screen and (min-width: 768px) {
