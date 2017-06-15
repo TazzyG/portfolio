@@ -8,11 +8,16 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
-      redirect_to :back, notice: 'Thank you. Your message was delivered!'
+      redirect_to :back, notice:  'Thank you. We will contact you soon!'
     else
       flash.now[:error] = 'Sorry, We can not seem to send this message.'
       render :new
     end
+  end
+
+  private
+  def contact_params 
+    params.require(:contact).permit(:name, :email, :content)
   end
 
 end

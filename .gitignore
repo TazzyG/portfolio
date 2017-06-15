@@ -26,3 +26,15 @@
 # Ignore uploaded test images.
 /public/uploads
 sendgrid.env
+
+.DS_store
+/public/system/*
+/public/assets/*
+
+~/*
+
+# Ignore Spring files.
+/spring/*.pid
+
+# Ignore application configuration
+/config/application.yml

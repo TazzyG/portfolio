@@ -1,27 +1,17 @@
-<form name="sentMessage" id="contactForm" novalidate>  
-  <%= form_for(Contact.new, html: { class: 'form-horizontal' }  ) do |f| %>   
-    
-    
-      <div class="form-group  floating-label-form-group controls" >
-        
-        <%= f.text_field :name,  class: "form-control", placeholder: "Name", id: "name"%>
-      </div>
-    
+
+  <%= form_for(Contact.new, html: { class: 'form-horizontal' }  ) do |f| %>            
+ <div class="form-group col-xs-12">
    
-      <div class="form-group  floating-label-form-group controls">
-        
-        <%= f.email_field :email,  class: "form-control", placeholder: "Email Address",  id: "email"%>
-      </div>
+    <%= f.text_field :name, autofocus: true, required: true, class: "form-control", placeholder: "Name" %>
+  </div>
+  <div class="form-group col-xs-12">
     
-    
-      <div class="form-group  floating-label-form-group controls">
-        
-        <%= f.text_area :message,  rows:5, class: "form-control", placeholder: "Message", id: "message"%>
-      </div>
-    
-    
-    <div class="btn-group">
-      <%= f.submit "Send", class: "btn btn-lg btn-primary btn-square btn-raised" %>
-    </div>
+    <%= f.email_field :email, autofocus: true, required:true, class: "form-control", placeholder: "Email Address"  %>
+  </div>
+  <div class="form-group col-xs-12">
+    <%= f.text_area :message, autofocus: true, rows:5, required:true,  class: "form-control", placeholder: "Message" %>
+  </div>
+ <div class="btn-group" id= "succes">
+      <%= f.submit "Send Message", class: "btn btn-primary" %>
+  </div>
 <% end %>
-</form>
