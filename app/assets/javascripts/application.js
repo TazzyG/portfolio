@@ -14,5 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require scrollReveal
+//= require custom
 //= require nav
 //= require_tree .

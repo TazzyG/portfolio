@@ -12,7 +12,8 @@
         <% @projects.each_slice(2) do |projects| %> 
           <div class= "row project-row">
             <% projects.each do |project| %>
-              <div class= "col-md-6 project_list">
+            
+              <div class= "col-md-6 project_list" data-scrollreveal="enter top over 1.5s">
                 <div class= "project img-responsive center"> 
                   <%= link_to project.link, target: 'blank' do %> 
                     <div class= "screen "> 
@@ -34,7 +35,9 @@
                  <% end %> 
                 </div> 
               </div>
+            
             <% end %> 
+
           </div>
         <% end %>
       </div>

@@ -45,6 +45,8 @@ gem 'carrierwave-imageoptimizer', '~> 1.4'
 
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
+gem 'scrollreveal-rails', '~> 0.0.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
