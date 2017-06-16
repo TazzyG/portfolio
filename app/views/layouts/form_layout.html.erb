@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%= render 'layouts/head'%>
+  <body id="page-top" data-target=".navbar-fixed-top">
+    <div id="wrapper">
+      <%= render 'layouts/nav' %>
+      <header></header>
+      <section>
+        <%= render 'layouts/flash_messages'%>
+        <%= yield %>      
+      </section>
+       <%= render 'layouts/footer' %>
+  </body>
+</html>

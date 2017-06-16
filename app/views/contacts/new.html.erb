@@ -4,10 +4,33 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
         <div class= "panel-heading">
-          <h2>Contact Us</h2>
+          <h2>Contact Me</h2>
         </div>
         <div class= "panel-body">
-          <%= render "contacts/form", contact: @contact %>
+          <%= form_for(@contact) do |f| %>
+            
+           <div class="form-group">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true, required: true, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, required:true, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :message %><br />
+              <%= f.text_area :message, autofocus: true, rows:3, required:true,  class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              
+              <%= f.hidden_field :nickname, hint: "leave this part blank"%>
+            </div>
+
+           <div class="btn-group">
+                <%= f.submit "Send Message", class: "btn btn-primary" %>
+            </div>
+          <% end %>
           </div>
       </div>
     </div>

@@ -11,6 +11,13 @@
   <div class="form-group col-xs-12">
     <%= f.text_area :message, autofocus: true, rows:5, required:true,  class: "form-control", placeholder: "Message" %>
   </div>
+
+  <div class="form-group col-xs-12">
+    
+    <%= f.hidden_field :nickname,  hint: "Leave this field blank" %>
+  </div>
+
+
  <div class="btn-group" id= "succes">
       <%= f.submit "Send Message", class: "btn btn-primary" %>
   </div>

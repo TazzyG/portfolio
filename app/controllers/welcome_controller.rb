@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+	layout "application"
 	def index
 		@showcases = Showcase.all
 		@projects = Project.all
