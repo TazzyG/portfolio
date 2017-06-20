@@ -27,7 +27,7 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
-  config.static_cache_control = "public, max-age=31536000"
+  config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=31536000" }
 
   
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
