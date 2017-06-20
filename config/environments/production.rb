@@ -33,7 +33,7 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host =  Proc.new { |source|
     if source =~ /\b(.png|.jpg|.gif)\b/i 
-      'https://s.3.amazonaws.com/haath'
+      'https://s3.amazonaws.com/haathi'
     end
 
   # Specifies the header that your server uses for sending files.
