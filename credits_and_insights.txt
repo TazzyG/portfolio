@@ -21,5 +21,14 @@ Page links were not working - Solution, contact form had to be in container and 
 config.action_controller.asset_host =  'd1aqxnjk8vqlqi.cloudfront.net' ... put this in here as I have to delete it from Production.rb was attempting to use cloudfront for my S3 not working for me.
 
 
+OK, it didn't work because I could not figure out how to link images that I uploaded, so local images did not render.
+Here's the code I removed. Redeployed back to local assets.
+
+ config.action_controller.asset_host = Proc.new { |source|
+    if source =~ /\b(.png|.jpg|.gif)\b/i
+      "d1aqxnjk8vqlqi.cloudfront.net" || 'http://asset.haathi-consulting.com'
+    end
+  }
+
 
 
