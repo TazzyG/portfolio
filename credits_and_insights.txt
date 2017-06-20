@@ -18,3 +18,5 @@ brew install graphicsmagick
 
 Page links were not working - Solution, contact form had to be in container and col-md classes had to be above that container
 
+config.action_controller.asset_host =  'd1aqxnjk8vqlqi.cloudfront.net' ... put this in here as I have to delete it from Production.rb was attempting to use cloudfront for my S3 not working for me.
+
