@@ -35,7 +35,7 @@ Rails.application.configure do
 
    config.action_controller.asset_host = Proc.new { |source|
     if source =~ /\b(.png|.jpg|.gif)\b/i
-      "d1aqxnjk8vqlqi.cloudfront.net"
+      "d1aqxnjk8vqlqi.cloudfront.net" || 'http://asset.haathi-consulting.com'
     end
   }
 
