@@ -32,7 +32,7 @@ Rails.application.configure do
   
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host =  Proc.new { |source|
-    if source =~ /\b(.png|.jpg|.gif)\b/i 'http:/d1aqxnjk8vqlqi.cloudfront.net'
+    if source =~ /\b(.png|.jpg|.gif)\b/i 'd1aqxnjk8vqlqi.cloudfront.net'
     end
 
   # Specifies the header that your server uses for sending files.
