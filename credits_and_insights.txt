@@ -20,5 +20,6 @@ Page links were not working - Solution, contact form had to be in container and 
 
 config.action_controller.asset_host =  'd1aqxnjk8vqlqi.cloudfront.net' ... put this in here as I have to delete it from Production.rb was attempting to use cloudfront for my S3 not working for me.
 
-Also copying this before I copy back my production.rb file. 
+
+
 
