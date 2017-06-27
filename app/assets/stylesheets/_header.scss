@@ -144,14 +144,24 @@
   width: 400px;
   line-height: 1.6em;
   @include serif-font;
+  a {
+  color: $light;
+  }
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
   #all, {font-size: 1.9em; }
 }
 
-#tag_description {
-	@include text-shadow-dark 
+.project .carousel-caption {
+
+ a {
+	color: $light;
+	@include text-shadow-dark;
+	}
+	
+	
+	
 }
 
 
