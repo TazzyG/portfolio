@@ -28,8 +28,8 @@
                   <% end %>   
                 </div>
                 <div class = "text-center text-light ">
-                  <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
-                  <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%>
+                  <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
+                  <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')%>
                   <% if current_user %>
                   <br>
 

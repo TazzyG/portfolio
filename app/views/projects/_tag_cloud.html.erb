@@ -1,5 +1,5 @@
 <div id= "tag_cloud" class= "text-center container">
-   <%= link_to "All ", root_path(:anchor => 'projects') %>
+   <%= link_to "All ", root_path(:anchor => 'projects'), id: "all" %>
    <% tag_cloud @projects.tag_counts, %w{s m l} do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
    <% end %>
