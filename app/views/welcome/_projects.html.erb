@@ -19,10 +19,16 @@
             <% projects.each do |project| %>
             
               <div class= "col-md-6 project_list" data-scrollreveal="enter top over 2s">
+
                 <div class= "project img-responsive center"> 
                   <%= link_to project.link, target: 'blank' do %> 
-                    <div class= "screen "> 
+                    <div class= "screen carousel"> 
+                      <div class= "item">
                         <%= image_tag project.image.url(:project) %> <br>
+                      </div>
+                      <div class= "carousel-caption text-center verical-center">
+                        <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')%>
+                      </div>
                     </div>
                     <div class= "keyboard " %>
                         <%= image_tag "keyboard1.png" %>
@@ -31,7 +37,7 @@
                 </div>
                 <div class = "text-center text-light ">
                   <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
-                  <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')%>
+                  
                   <% if current_user %>
                   <br>
 
