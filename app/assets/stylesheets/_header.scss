@@ -139,14 +139,15 @@
     }
 	}		
 }
-
-#tag_cloud {
-  @include sans-serif-font;
+  
+ #tag_cloud {
   width: 400px;
-  line-height: 1.5em;
-  .s { font-size: 0.33em; }
-  .m { font-size: 0.66em; }
-  .l { font-size: 1em; }
+  line-height: 1.6em;
+  @include serif-font;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+  #all, {font-size: 1.9em; }
 }
 
 
