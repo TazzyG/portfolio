@@ -145,7 +145,7 @@
   line-height: 1.6em;
   @include serif-font;
   a {
-  color: $light;
+  color: $primary;
   }
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
@@ -157,7 +157,10 @@
 
  a {
 	color: $light;
-	@include text-shadow-dark;
+	background: $primary; 
+	opacity: 0.5; 
+	border-radius: 10px;
+
 	}
 	
 	
