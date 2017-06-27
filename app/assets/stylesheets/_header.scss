@@ -150,6 +150,10 @@
   #all, {font-size: 1.9em; }
 }
 
+#tag_description {
+	@include text-shadow-dark 
+}
+
 
 @media(min-width:1025px) {
 	intro-slider {

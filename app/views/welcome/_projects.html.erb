@@ -26,7 +26,7 @@
                       <div class= "item">
                         <%= image_tag project.image.url(:project) %> <br>
                       </div>
-                      <div class= "carousel-caption text-center verical-center">
+                      <div class= "carousel-caption text-center verical-center" id="tag-description">
                         <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(' ')%>
                       </div>
                     </div>
