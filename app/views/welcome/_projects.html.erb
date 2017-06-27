@@ -6,7 +6,9 @@
         <h4 class= "text-light"> All but one is built with Ruby on Rails </h4>
         <%= render "projects/tag_cloud" %>
         <hr class= "primary mb">
-        <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
+        <% if current_user %>
+          <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
+        <% end %>
       </div>
     </div> 
     <div class= "row all_projects-row">
