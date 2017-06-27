@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-rails'
+gem 'acts-as-taggable-on', '~> 4.0'
 
 gem 'capistrano-dotenv-tasks', require: false
 gem 'dotenv-rails'

@@ -140,6 +140,16 @@
 	}		
 }
 
+#tag_cloud {
+  @include sans-serif-font;
+  width: 400px;
+  line-height: 1.5em;
+  .s { font-size: 0.33em; }
+  .m { font-size: 0.66em; }
+  .l { font-size: 1em; }
+}
+
+
 @media(min-width:1025px) {
 	intro-slider {
 	.brand-heading {

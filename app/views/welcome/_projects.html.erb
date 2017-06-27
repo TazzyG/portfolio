@@ -5,15 +5,17 @@
         <h2> Projects </h2>
         <h4 class= "text-light"> All but one is built with Ruby on Rails </h4>
         <hr class= "primary mb">
+        <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
       </div>
     </div> 
     <div class= "row all_projects-row">
       <div class="col-md-12 projects">
         <% @projects.each_slice(2) do |projects| %> 
           <div class= "row project-row">
+            <%= render "projects/tag_cloud" %>
             <% projects.each do |project| %>
             
-              <div class= "col-md-6 project_list" data-scrollreveal="enter bottom over 5s">
+              <div class= "col-md-6 project_list" data-scrollreveal="enter top over 2s">
                 <div class= "project img-responsive center"> 
                   <%= link_to project.link, target: 'blank' do %> 
                     <div class= "screen "> 
@@ -25,12 +27,15 @@
                   <% end %>   
                 </div>
                 <div class = "text-center text-light ">
-                  <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
+                  <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %>
+                  <%= raw project.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%>
                   <% if current_user %>
+                  <br>
+
                     <div>
                       <%= link_to "Edit", edit_project_path(project) %> 
                       <%= link_to "Delete", project, method: :delete, data: {confirm: "Are You Sure?"} %>
-                      <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
+                      
                     </div>
                  <% end %> 
                 </div> 

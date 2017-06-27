@@ -8,7 +8,8 @@
         </div>
         <div class= "panel-body">
          <p><%= image_tag @project.image_url %> </p>
-         <p><%= @project.content %>
+         <p><%= @project.content %></p>
+         <p>Tags: <%= raw @project.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%>
         </div>
         <div class = "panel-footer">
           <%= link_to 'Edit', edit_project_path(@project) %> | 

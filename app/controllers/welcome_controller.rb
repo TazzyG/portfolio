@@ -2,7 +2,11 @@ class WelcomeController < ApplicationController
 	layout "application"
 	def index
 		@showcases = Showcase.all
-		@projects = Project.all
+		if params[:tag]
+			@projects = Project.tagged_with(params[:tag]).all
+		else
+			@projects = Project.all
+		end
 		
 	end
 	def new
