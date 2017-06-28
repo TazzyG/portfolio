@@ -4,7 +4,9 @@
       <div class= "col-lg-12 text-center">
         <h2> Projects </h2>
         <h4 class= "text-light"> All but one is built with Ruby on Rails, PostgreSQL, and Bootstrap SASS on a DigitalOcean droplet </h4>
-        <%= render "projects/tag_cloud" %>
+        <div class = "col-lg-offset-2 col-lg-8">
+          <%= render "projects/tag_cloud" %>
+        </div>
         <hr class= "primary mb">
         <% if current_user %>
           <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>

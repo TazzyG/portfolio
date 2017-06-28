@@ -1,6 +1,7 @@
 module ApplicationHelper
 
   include ActsAsTaggableOn::TagsHelper
+  ActsAsTaggableOn.remove_unused_tags = true
   ActsAsTaggableOn.force_lowercase = true
 
 	def full_title(page_title = '')
