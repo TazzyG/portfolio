@@ -5,7 +5,7 @@
           <i class="fa fa-bars"></i>
       </button>
       <span class="logo">
-        <%= link_to root_path do %>
+        <%= link_to root_path(:anchor => "hidden") do %>
           <%= image_tag "haathi_logo.png", class: "brand_image", alt: "logo"%>
         <% end %>
       </span>
@@ -13,13 +13,13 @@
 		<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
 				<li class="hidden">
-					<a href= "#page-top"> </a>
+					<%= link_to root_path(:anchor => "hidden") %>
 				</li>
 				<li class= "page-scroll">
-					<a href= "#about">About</a> 
+          <%= link_to "about", root_path(:anchor => "about") %>
 				</li>
 				<li class= "page-scroll">
-					<a href= "#projects">Projects</a> 
+          <%= link_to "projects",  root_path(:anchor =>"projects") %>
 				</li>
         <li>
           <%= link_to "Say Hello", contacts_path %>

@@ -7,10 +7,6 @@ Rails.application.routes.draw do
 	resources :showcases
   resources "contacts", only: [:new, :create]
 
-  match '/contacts', to: 'contacts#new',  via: 'get'
-
-  get 'tags/:tag', to: 'welcome#index', as: :tag
-  resources :tags
-  
+  match '/contacts', to: 'contacts#new',  via: 'get' 
 	
 end
