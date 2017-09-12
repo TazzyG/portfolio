@@ -11,6 +11,7 @@ set :use_sudo,        false
 set :deploy_via, :remote_cache
 set :deploy_to, '/home/laurie/haathi-consulting'
 set :rvm_ruby_version, '2.4.1'
+set :rvm_type, :system
 
 set :pty,             true
 set :use_sudo,        false
