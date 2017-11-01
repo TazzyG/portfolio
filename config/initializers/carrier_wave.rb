@@ -11,10 +11,10 @@ CarrierWave.configure do |config|
       provider:              'AWS',
       aws_access_key_id:     ENV["AWS_ACCESS_KEY_ID"],
       aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
-      region: ENV['FOG_REGION'],
-      host: 's3.haathi-consulting.com',
-      endpoint: 'https://s3.haahi-consulting.com:8080'
-      # config.asset_host = https:://s3haathi-consulting.com/haathi
+      region: ENV['FOG_REGION']
+      # host: 's3.creativecalgary.ca'
+      # endpoint: 'https://s3.creativecalgary.ca:8080'
+      # config.asset_host = https:://s3.eklecticmarket.com/eklecticmarket
   }
     # config.cache_dir = "#{Rails.root}/tmp/uploads"
     config.fog_directory  = ENV['FOG_DIRECTORY']
