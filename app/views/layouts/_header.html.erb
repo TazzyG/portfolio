@@ -28,7 +28,7 @@
     <% @showcases.each do |showcase| %>
     <div class="item">
 
-       <div class="fill" style="background-image: url(<%=asset_path 'showcase.image.url', {class: "img-responsive", alt: "haathi-consulting welcome"} %>);"></div>
+       <div class="fill" style="background-image: url(<%=asset_path showcase.image.url, {class: "img-responsive", alt: "haathi-consulting welcome"} %>);"></div>
 
       <div class="overlay"></div>
       <div class = "carousel-caption"> 
