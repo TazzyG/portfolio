@@ -4,15 +4,15 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
+      <div class="fill" style="background-image: url(<%=asset_path 'redd-angelo-11908.jpg', {class: "img-responsive", alt: "haathi-consulting welcome"} %>);"></div>
       
-      <%= image_tag "redd-angelo-11908.jpg",  class: "fill"%> 
     
       <div class="overlay"></div>
 
       <div class = "carousel-caption"> 
         <div class= "intro-body">
           <%= render 'layouts/flash_messages' %>
-          <h1 class= "brand-heading">Websites Built On</h1>
+          <h1 class= "brand-heading">Websites Built With</h1>
           <h2 class= "brand-sub-heading">Ruby on Rails</h2>
           
           
@@ -27,7 +27,8 @@
     </div>
     <% @showcases.each do |showcase| %>
     <div class="item">
-      <%= image_tag showcase.image.url, class: "fill" %> 
+
+       <div class="fill" style="background-image: url(<%=asset_path 'showcase.image.url', {class: "img-responsive", alt: "haathi-consulting welcome"} %>);"></div>
 
       <div class="overlay"></div>
       <div class = "carousel-caption"> 
