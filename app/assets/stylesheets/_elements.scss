@@ -4,6 +4,7 @@ body {
 	height: 100%;
 	color: $dark;;
 	background-color: $canvas;
+	background-size: cover;
 }
 
 html {
@@ -13,7 +14,8 @@ html {
 
 #wrapper {
 	height: 100%;
-	width: 100%
+	width: 100%;
+	overflow: hidden;
 }
 
 img {

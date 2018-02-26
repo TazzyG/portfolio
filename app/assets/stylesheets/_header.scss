@@ -169,6 +169,14 @@
 	
 }
 
+.image_in_background {
+  background-image: asset_url('nikolas-behrendt-224067.jpg');
+  background-repeat: no-repeat;
+  @include background-cover;
+  background-attachment: fixed;
+ 
+}
+
 
 @media(min-width:1025px) {
 	intro-slider {

@@ -1,9 +1,52 @@
-<div class = "container">
-	<div class= "row text-center">
-		<div class = "col-md-12">
-
-			<h4><%= link_to "Say Hello", contacts_path %></h4>
-			
-		</div>
-	</div>
-</div>
+<footer class="footer">
+  <div class="upper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>
+            <%= image_tag "elephant.png", class: "footer-image", alt: "creative calgary" %>
+          </h2>
+        </div>
+        <div class="col-md-3">
+          <h4></h4>
+          <ul class="list-unstyled footer-links">
+            <li>
+             
+            </li>
+            <li>
+            
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4></h4>
+          <ul class="list-unstyled footer-links">
+            <li>
+                <%= link_to "Contact Us", new_contact_path %>
+            </li>
+            <li>
+                
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4></h4>
+            <ul class="list-unstyled footer-links">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lower">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <span class="small">Copyright &copy; <span id="year"><%= Date.today.year %></span> - Haathi Consulting Inc. All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
