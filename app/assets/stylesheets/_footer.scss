@@ -1,41 +1,8 @@
 .footer {
-	.upper {
-		padding: 50px 0;
-		color: $dark;
-		background-color: darken($lilac, 50%);
-
-		p {
-			color: fade($light, 80%);
-		}
-		h2 {
-			padding-bottom: 10px;
-		}
-		h4 {
-			padding-bottom: 10px;
-			padding-top: 25px;
-		}
-		.footer-image {
-        height: 50px;
-        
-    }
-		
-		
-		.footer-links {
-			li {
-				padding-bottom: 10px;
-				a {
-					color: $light;
-					&:hover {
-						color: $primary;
-					}
-				}
-			}
-		}
-	}
 
 	.lower {
 		padding: 15px 0;
-		background-color: darken($lilac, 20%);
+		background-color: lighten($lilac, 20%);
 		.small {
 			color: fade($light, 70%);
 		}
@@ -46,11 +13,5 @@
 @media(max-width:990px) {
 	.footer {
 		text-align: center;
-		.upper {
-			.footer-image {
-        max-height: 40px;
-        margin: 7px 0 0 10px;
-				}
-	    }
-		}
 	}
+}
