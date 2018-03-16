@@ -42,3 +42,4 @@ sendgrid.env
 /config/application.yml
 
 /passwords.txt
+passwords.txt
