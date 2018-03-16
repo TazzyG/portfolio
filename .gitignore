@@ -41,4 +41,4 @@ sendgrid.env
 # Ignore application configuration
 /config/application.yml
 
-passwords.txt
+/passwords.txt
