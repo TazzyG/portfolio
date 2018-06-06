@@ -1,60 +1,203 @@
-
-  <div class = "container">       
-    <div class= "row">
-      <div class= "col-lg-12 text-center">
+<section class="portfolio-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
         <h2> Projects </h2>
-        <h4 class= "text-light"> All but one is built with Ruby on Rails, PostgreSQL, and Bootstrap SASS on a DigitalOcean droplet </h4>
-       
-        <hr class= "primary mb">
-        <% if current_user %>
-          <%= link_to "add a new project", new_project_path, class: 'btn btn-primary' %>
-        <% end %>
+        <hr class="primary">
+        <ul class="list-inline hidden-xs" id="filters">
+          <li>
+            <button data-filter="*" typle-"button" class="btn btn-primary btn-square btn-raised"> All </button>
+          </li>
+          <li>
+            <button data-filter=".ruby" typle-"button" class="btn btn-primary btn-square btn-raised">Ruby</button>
+          </li>
+          <li>
+            <button data-filter=".marketplace" typle-"button" class="btn btn-primary btn-square btn-raised">MarketPlace</button>
+          </li>
+          <li>
+            <button data-filter=".apis" typle-"button" class="btn btn-primary btn-square btn-raised">APIs</button>
+          </li>
+        </ul>      
       </div>
-    </div> 
-    <div class= "row all_projects-row">
-      <div class="col-md-12 projects">
-        <% @projects.each_slice(2) do |projects| %> 
-          <div class= "row project-row">
-
-            <% projects.each do |project| %>
-             
-                <div class= "col-md-6 project_list" data-scrollreveal="enter top over 2s">
-
-                  <div class= "project img-responsive center"> 
-                    <%= link_to project.link, target: 'blank' do %> 
-                      <div class= "screen carousel"> 
-                        <div class= "item">
-                          <%= image_tag project.image.url(:project) %> <br>
-                        </div>
-                        <div class= "carousel-caption text-center" id="tag-description">
-              
-                        </div>
-                      </div>
-                      <div class= "keyboard " %>
-                          <%= image_tag "keyboard1.png" %>
-                      </div>
-                    <% end %>   
-                  </div>
-                  <div class = "text-center text-light ">
-                    <%= project.title.humanize.gsub(/\b('?[a-z])/) { $1.capitalize } %><br>
-                    
-                    <% if current_user %>
-                    <br>
-
-                      <div>
-                        <%= link_to "Edit", edit_project_path(project) %> 
-                        <%= link_to "Delete", project, method: :delete, data: {confirm: "Are You Sure?"} %>
-                        
-                      </div>
-                   <% end %> 
-                  </div> 
-                </div>
-             
-            <% end %> 
-
+    </div>
+    <div class="row">
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal1" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
           </div>
-        <% end %>
+            <%= image_tag @projects[0].image.url(@projects[0]) %>
+        </a>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal2" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
+          </div>
+            <%= image_tag @projects[1].image.url(@projects[1]) %>
+        </a>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal3" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
+          </div>
+            <%= image_tag @projects[2].image.url(@projects[2]) %>
+        </a>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal4" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
+          </div>
+            <%= image_tag @projects[3].image.url(@projects[3]) %>
+        </a>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal5" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
+          </div>
+            <%= image_tag @projects[4].image.url(@projects[4]) %>
+        </a>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#modal6" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <h3>View Project </h3>
+            </div>
+          </div>
+            <%= image_tag @projects[5].image.url(@projects[5]) %>
+        </a>
+      </div>
+    </div>
+</section> 
+
+<div id="modal1" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
+
+<div id="modal2" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row first">
+        <div class="col-lg-12">
+          <h2> Project Name </h2>
+          <p> Project Description </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 

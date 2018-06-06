@@ -1,26 +1,128 @@
-.project_list {
-
-	max-width: 600px; 
-	margin: 0 auto;
-
-	.screen {
-	display: block;
-	border: 10px solid black;
-	border-radius: 8px;
-	position: relative;	
-
+.portfolio-1 {
+	.portfolio-item {
+		margin: 0 0 15px;
+		right: 0;
+		.portfolio-link {
+			display: block;
+			position: relative;
+			max-width: 400px;
+			margin: 0 auto;
+			.caption {
+				background: fade($dark, 90%);
+				postion: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: all ease 0.5s;
+				-webkit-transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s;
+				&:hover {
+					opacity: 1;
+				}
+				.caption-content {
+					position: absolute;
+					width: 100%;
+					height: 20px;
+					font-size: 20px;
+					text-align: center;
+					top: 50%;
+					margin-top: -12px;
+					color: $light;
+					h3, h4 {
+						margin: 0;
+					}	
+				}
+			}
 		}
-
-	.keyboard {
-		display: block;
-		margin-top: -5px;
-		position: relative;
-	}	
-}
-
-@media(min-width: 767px) {
-	.project-list {
-		margin-bottom: 30px;	
+		* {
+			z-index: 2;
+		}
 	}
 }
 
+@media(min-width:767px) {
+  .portfolio-1 {
+      .portfolio-item {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+
+.portfolio-modal {
+	.modal-content {
+		background-color: $light;
+	}
+	.close-modal {
+		position: absolute;
+		width: 75px;
+		height: 75px;
+		background-color: transparent;
+		top: 25%;
+		right: 25%;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.3;
+		}
+		.lr {
+			height: 75px;
+			width: 1px;
+			margin-left: 35px;
+			background-color: $dark;
+			transporm: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			/* IE 9 */
+			-webkit-transform: rotate(45deg);
+			/* Safari and Chrome */
+			z-index:1051;
+			.rl {
+			height: 75px;
+			width: 1px;
+			background-color: $dark;
+			transporm: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			/* IE 9 */
+			-webkit-transform: rotate(90deg);
+			/* Safari and Chrome */
+			z-index:1052;
+		
+		}
+	}
+}
+.row.first {
+	margin-top: 100px;
+
+}
+.page-header {
+	margin-top: 0;
+}
+ul.project-details {
+	margin-top: 15px;
+	li {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid darken($light, 10%);	
+	}
+	li:first-child {
+		padding-top: 15px;
+		border-top: 1px solid darken($light, 10%);
+	}
+}
+}
+
+ul#filters {
+	padding-bottom: 15px;
+	li {
+		button.btn-link {
+			color: $dark;
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary;
+					text-decoration: none;
+					box-shadow: none;
+				
+			}
+		}
+	}
+}
