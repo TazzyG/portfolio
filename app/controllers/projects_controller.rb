@@ -37,6 +37,10 @@ def destroy
 	redirect_to root_path
 end
 
+def nl2br(s)
+ 	@s.gsub(/\n/, '<br>')
+end
+
 private
 	def set_project
 		@project = Project.find(params[:id])

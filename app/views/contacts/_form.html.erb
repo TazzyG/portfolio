@@ -1,0 +1,41 @@
+<div class="text-left container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div>
+        <div>
+          <h2>Hello</h2>
+        </div>
+        <div >
+          <%= form_for(@contact) do |f| %>
+            
+           <div class="form-group">
+             
+              <%= f.text_field :name, required: true, class: "form-control" , placeholder: "Name"%>
+            </div>
+            <div class="form-group">
+            
+              <%= f.email_field :email, required:true, class: "form-control", placeholder: "Email" %>
+            </div>
+            <div class="form-group">
+             
+              <%= f.text_area :message, rows:3, required:true,  class: "form-control", placeholder: "Message" %>
+            </div>
+
+            <div class="form-group">
+              
+              <%= f.hidden_field :nickname, hint: "leave this part blank"%>
+            </div>
+
+           <div class="btn-group">
+                <%= f.submit "Send Message", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+          </div>
+          <div class= "text-center">
+            <h3> I promise to get back to you very soon </h3>
+            <%= image_tag('laurie.jpg', class: "img-circle")  %> 
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
