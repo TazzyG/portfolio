@@ -1,4 +1,4 @@
-<div id="modal1" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="modal1" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -9,111 +9,46 @@
     <div class="container">
       <div class="row first">
         <div class="col-lg-12">
-          <h2 clas"page-header"> <%= @projects[2].title %> </h2>
-          <p>  <%= @projects[2].content %></p>
+          <h2 class="page-header"><%= @projects[0].title %> </h2>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
+          <div class="owl-carousel owl-theme">     
+            <div class="item">
+              <%= image_tag("dawid-zawila-221021.jpg") %>
+            </div>
+            <div class="item">               
+              <%= image_tag("benedicto-de-jesus-118405.jpg") %>
+            </div>
+            <div class="item">
+              <%= image_tag("jonathan-bean-40734.jpg") %>
+            </div>
+          </div>                  
+        </div>
+        <div class="col-md-4">
+          <h3> Project Description </h3>
+          <p> <%= simple_format(@projects[0].content) %> </p>
+        </div>
+      </div>   
+      <div class="row">
+        <div class= "col-md-8">
+          <h3> Project Details </h3>
+          <ul class="list-unstyled project-details">
+            <li> 
+              <strong> Audience: </strong> Lorem Ipsum 
+            </li>
+            <li> 
+              <strong> Features: </strong> Maps, Marketplace, Calendar
+            </li>
+            <li> 
+              <strong> Date: </strong> January, 2016
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div id="modal2" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row first">
-        <div class="col-lg-12">
-          <h2> <%= @projects[3].title %> </h2>
-          <p>  <%= @projects[3].content %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="modal3" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row first">
-        <div class="col-lg-12">
-          <h2> <%= @projects[4].title %> </h2>
-          <p>  <%= @projects[4].content %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="modal4" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row first">
-        <div class="col-lg-12">
-          <h2> <%= @projects[3].title %> </h2>
-          <p>  <%= @projects[3].content %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="modal5" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row first">
-        <div class="col-lg-12">
-          <h2> <%= @projects[4].title %> </h2>
-          <p>  <%= @projects[4].content %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="modal6" class="portfolio-modal modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row first">
-        <div class="col-lg-12">
-          <h2> <%= @projects[5].title %> </h2>
-          <p>  <%= @projects[5].content %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+  
 
