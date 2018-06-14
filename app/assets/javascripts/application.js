@@ -19,6 +19,7 @@
 //= require nav
 //= require owl.carousel
 //= require welcome
+//= require stellar
 //= require_tree .
 
 

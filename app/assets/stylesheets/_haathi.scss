@@ -1,0 +1,54 @@
+.bg-parallax-dark {
+	width: 100%;
+  height: auto;
+  background-attachment: scroll;
+  @include background-cover;
+  background-position: center center;
+  color: $light;
+}
+
+.aside-overlay,
+.section-overlay {
+	background-color: rgba(248, 82, 47, 0.8);
+}
+
+.aside-overlay {
+	padding: 50px 0;
+}
+
+.section-overlay {
+	padding: 100px 0;
+}
+
+.container-overlay {
+	
+	
+	background-image: asset_url('elephants.jpg');
+	 	
+		#inner-box {
+	    background-color: rgba(248, 82, 47, 0.8);
+	   
+  		margin: 0;
+  		padding: 1em;
+	    
+	}
+}
+
+.btn-outline.btn-light {
+	border: 1px solid $light;
+	background-color: transparent;
+	@include button-transition;
+	color: $light;
+	&:hover, &:focus {
+		border: 1px solid $light;
+		color: $dark;
+		background-color: $light;
+	}
+}
+
+@media(min-width: 767px) {
+	.bg-parallax-dark {
+	background-attachment: fixed;
+	}
+}
+
