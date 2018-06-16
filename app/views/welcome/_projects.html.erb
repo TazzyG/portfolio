@@ -7,64 +7,18 @@
       </div>
     </div>
     <div class="row">
+      <%= @projects.each_with_index do |project, index| %>
       <div class="col-sm-4 portfolio-item">
-        <a href="#modal1" class="portfolio-link" data-toggle="modal">
+        <a href="#modal<%= index+1 %>" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <h3>View Project </h3>
             </div>
           </div>
-            <%= image_tag @projects[0].image.url(@projects[0]) %>
+            <%= image_tag project.image.url %>
         </a>
       </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#modal2" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <h3>View Project </h3>
-            </div>
-          </div>
-            <%= image_tag @projects[1].image.url(@projects[1]) %>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#modal3" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <h3>View Project </h3>
-            </div>
-          </div>
-            <%= image_tag @projects[2].image.url(@projects[2]) %>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#modal4" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-
-          </div>
-            <%= image_tag @projects[3].image.url(@projects[3]) %>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#modal5" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <h3>View Project </h3>
-            </div>
-          </div>
-            <%= image_tag @projects[4].image.url(@projects[4]) %>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#modal6" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <h3>View Project </h3>
-            </div>
-          </div>
-            <%= image_tag @projects[5].image.url(@projects[5]) %>
-        </a>
-      </div>
+      <% end %>
     </div>
 </section> 
 <%= render "modals" %> 

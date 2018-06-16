@@ -1,5 +1,5 @@
 <% @projects.each_with_index do |project, index| %>
-<div id="modal#1" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="modal<%= index+1 %>" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -16,9 +16,11 @@
       <div class="row">
         <div class="col-md-8">
           <div class="owl-carousel owl-theme">     
-            <%= project.project_infos.each do |project_info| %>     
+            <% project.project_infos.each do |project_info| %>     
               <div class="item">
                 <%= image_tag project_info.image_url %>
+                <br>
+                <%= simple_format(project_info.info) %>
               </div>
             <% end %>
           </div>                  
