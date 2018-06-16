@@ -1,5 +1,4 @@
 # config valid only for current version of Capistrano
-lock "3.10.1"
 
 set :application, "haathi-consulting"
 set :repo_url, "https://github.com/TazzyG/portfolio.git"
