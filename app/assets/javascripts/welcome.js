@@ -1,15 +1,3 @@
-// $(document).ready(function() {
-//     $('.owl-carousel').owlCarousel({
-//         loop: true,
-//         margin: 10,
-//         nav: true,
-//         navText: [
-//         "<i class='fa fa-angle-left'></i> Prev",
-//         "Next <i clas='fa fa-angle-right'></i>"
-//         ],
-//     });
-// });
-
 $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
         center: true,
@@ -38,7 +26,7 @@ $(document).ready(function(){
     any: function () {
       return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
-});
+};
 
 
   
@@ -53,3 +41,5 @@ if (!isMobile.any()) {
       hideDistantElements: false
     });
   }
+
+});

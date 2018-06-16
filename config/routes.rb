@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root 'welcome#index' 
 
-	resources :projects
+	resources :projects do
+		resources :project_infos
+	end
+	
 	resources :showcases
   resources "contacts", only: [:new, :create]
 

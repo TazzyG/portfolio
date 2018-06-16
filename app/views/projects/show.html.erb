@@ -9,11 +9,16 @@
         <div class= "panel-body">
          <p><%= image_tag @project.image_url %> </p>
          <p><%= @project.content %></p>
-         
+         <% if current_user %>
+          <%= render "project_infos/form" %> 
+         <% end %> 
+         <%= render "project_infos/form" %> 
         </div>
         <div class = "panel-footer">
-          <%= link_to 'Edit', edit_project_path(@project) %> | 
-          <%= link_to 'Delete', @project, method: :delete, data: { confirm: "Are you sure?" } %>
+          <% if current_user %> 
+            <%= link_to 'Edit', edit_project_path(@project) %> | 
+            <%= link_to 'Delete', @project, method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>  
         </div>
       </div>
     </div>

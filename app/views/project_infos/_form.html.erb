@@ -1,0 +1,22 @@
+<div>
+<%= form_for([@project, @project.project_infos.build]) do |f| %>
+    
+    <div class="form-group">
+      <%= f.hidden_field :project_id %>
+    </div>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control", placeholder: "Select Image" %>
+      <%= f.hidden_field :image_cache %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :info, autofocus: true, class: "form-control", placeholder: "About this Screen Shot" %>
+    </div>
+    
+    <div class="btn-group">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+<% end %>
+</div>
+
+<%= render "shared/image_script" %>

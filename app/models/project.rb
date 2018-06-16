@@ -3,4 +3,5 @@ class Project < ApplicationRecord
 	acts_as_taggable
 	
 	belongs_to :user
+	has_many :project_infos
 end
