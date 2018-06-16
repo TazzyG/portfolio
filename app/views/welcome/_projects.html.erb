@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="row">
-      <%= @projects.each_with_index do |project, index| %>
+      <% @projects.each_with_index do |project, index| %>
       <div class="col-sm-4 portfolio-item">
         <a href="#modal<%= index+1 %>" class="portfolio-link" data-toggle="modal">
           <div class="caption">
@@ -17,9 +17,12 @@
           </div>
             <%= image_tag project.image.url %>
         </a>
+       
       </div>
       <% end %>
+
     </div>
+    
 </section> 
 <%= render "modals" %> 
 
