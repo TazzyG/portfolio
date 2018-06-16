@@ -21,9 +21,10 @@
     <%= f.text_field :site_name, autofocus: true, class: "form-control", placeholder: "site_name" %>
   </div>
   <div class="form-group">
-    <%= f.text_area :content, autofocus: true, class: "form-control", placeholder: "content" %>
+    <%= f.label "features of this app"%><br />
+    <%= f.text_area :content, autofocus: true, class: "form-control", wrap: "hard", placeholder:  "Tell us about the idea... \n example.. Grow some herbs and cook Italian meals... \n example .. Build a website", :text_area_html => {:maxlength => 260, :size => 300}  %>
     <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-    <%= f.text_field :tag_list, autofocus: true %>
+    <%= f.text_field :tag_list, autofocus: true, class: "form-control", placeholder: "sample tags, map, search, calendar, payment functions" %>
   </div>
   
   <div class="form-group">

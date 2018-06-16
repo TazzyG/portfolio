@@ -35,14 +35,14 @@
           <h3> Project Details </h3>
           <ul class="list-unstyled project-details">
             <li> 
-              <strong> Audience: </strong> Lorem Ipsum 
+              <strong> Features: </strong> <%= raw project.tag_list.map { |t| t }.join(', ')%>
             </li>
+            <% unless project.link == "" || nil %>
             <li> 
-              <strong> Features: </strong> Maps, Marketplace, Calendar
+
+              <strong> Website Link </strong><%= project.link  %>
             </li>
-            <li> 
-              <strong> Date: </strong> January, 2016
-            </li>
+            <% end %>
           </ul>
         </div>
       </div>
