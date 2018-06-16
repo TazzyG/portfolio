@@ -1,11 +1,5 @@
 $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
-        center: true,
-    items:1,
-    loop:false,
-    margin:0
-       
-    });
+     
 
   var isMobile = {
     Android: function () {
@@ -43,3 +37,14 @@ if (!isMobile.any()) {
   }
 
 });
+
+function owlCarousel() {
+   $('.owl-carousel').owlCarousel({
+        center: true,
+    items:1,
+    loop:false,
+    margin:0
+       
+    });
+}
+window.addEventListener('turbolinks:load', owlCarousel);

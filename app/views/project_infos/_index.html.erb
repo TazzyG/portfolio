@@ -1,6 +1,6 @@
-<%= project_infos.each do |project_info| %>     
+<%= @project.project_infos.each do |project_info| %>     
   <div class="item">
-    <%= image_tag project_info_url %>
+    <%= image_tag project_info.image_url %>
   </div>
 <% end %>
          

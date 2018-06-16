@@ -12,8 +12,8 @@
          <% if current_user %>
           <%= render "project_infos/form" %> 
          <% end %> 
-         <%= render "project_infos/form" %> 
         </div>
+        <%= render "project_infos/index" %>
         <div class = "panel-footer">
           <% if current_user %> 
             <%= link_to 'Edit', edit_project_path(@project) %> | 

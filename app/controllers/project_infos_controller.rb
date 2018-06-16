@@ -11,7 +11,12 @@ class ProjectInfosController < ApplicationController
 	end
 
 	def create
-		@project.project_infos.create(project_info_params)
+		@team_info = @project.project_infos.create(project_info_params)
+		if @team_info.save
+			redirect_to @project, notice: "success"
+		else
+			redirect_to @project, notice: "oops, not saved"
+		end
 	end
 
 	def show
@@ -33,7 +38,7 @@ class ProjectInfosController < ApplicationController
 			@project = Project.find(params[:project_id])
 		end
 
-		def project_info_parms
+		def project_info_params
 			params.require(:project_info).permit(:image, :info)
 		end
 

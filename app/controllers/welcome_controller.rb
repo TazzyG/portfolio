@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
 		@showcases = Showcase.all
 		@projects = Project.all
 		@contact = Contact.new
+		@project_infos = ProjectInfo.all
 	end
 	# def new
 	# 	@contact = Contact.new
