@@ -41,6 +41,7 @@
 .nav>li>a:hover, 
 .nav>li>a:focus {
 	background-color: fade($light, 50%);
+	color: $primary;
 }
 
 .navbar-toggle {
@@ -139,45 +140,6 @@
 	}
 
 	
-	.navbar-light.top-nav-collapse {
-		padding: 20px 0;
-		border-bottom: 1px solid;
-		border-color: $border;
-		background-color: $canvas;
-		.navbar-brand {
-			.logo: {
-			display: none;
-				}
-			.logo-collapse: {
-				display: inherit;
-			}
-			}
-
-		#Haathi {
-			a { color: $dark;
-				}
-			}
-
-		a {
-			color: $dark
-		}
-		li {
-				a {
-					color: $dark;
-					&:after {
-						background: $primary;
-					}
-					&:hover,
-					&:focus,
-					&:active {
-						color: $dark;
-					}
-				}
-
-			}
-		.nav {
-
-		}
-	}
+	
 	
 }

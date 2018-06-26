@@ -3,6 +3,15 @@ body {
 	font-size: 16px;
 }
 
+a {
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+	text-decoration: none;
+}
+
+
 h1, 
 h2,
 h3,
