@@ -48,6 +48,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 gem 'scrollreveal-rails', '~> 0.0.1'
 gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
+gem 'recaptcha', '~> 4.3', '>= 4.3.1', require: 'recaptcha/rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -22,9 +22,11 @@
             </div>
 
             <div class="form-group">
-              
               <%= f.hidden_field :nickname, hint: "leave this part blank"%>
+              <%= recaptcha_tags %>
             </div>
+            
+            
 
            <div class="btn-group">
                 <%= f.submit "Send Message", class: "btn btn-primary" %>

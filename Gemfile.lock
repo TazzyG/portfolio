@@ -197,6 +197,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    recaptcha (4.13.0)
+      json
     ref (2.0.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -286,6 +288,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.3)
+  recaptcha (~> 4.3, >= 4.3.1)
   sass-rails (~> 5.0)
   scrollreveal-rails (~> 0.0.1)
   sendgrid (~> 1.2, >= 1.2.4)
